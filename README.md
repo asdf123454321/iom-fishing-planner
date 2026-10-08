@@ -10,36 +10,44 @@ This project aims to optimize the allocation of fishing resources in the Idle Ob
 
 ### Installation
 1. Clone this repository to your local machine.
-2. Install the required dependencies using the .NET CLI:
+1. Install the required dependencies using the .NET CLI:
    ```sh
    dotnet restore
    ```
 
 ### Running the Project
 1. Navigate to the project directory.
-2. Run the main script with the desired parameters:
+1. Run the main script with the desired parameters:
    ```sh
-   dotnet run --goal [equality|cards|legendary-cards] --tier [all|1|2] --priority [equality|easiest|hardest] --stats <path-to-exportstats.json>
+   dotnet run --goal [Equality|Cards|LegendaryCards] --tier [All|Tier1|Tier2] --priority [Equality|Easiest|Hardest] --ignore-fisher --drone-count <###> --stats <path-to-exportstats.json>
    ```
 
 ### Parameters
-- `--goal <goal>`: The optimization goal. Options are `equality`, `cards`, and `legendary-cards`.
-- `--tier <scope>`: The scope for the equality goal. Options are `all`, `1`, and `2`.
-- `--priority <priority>`: The card priority. Options are `equality`, `easiest`, and `hardest`.
-- `--stats <path-to-exportstats.json>`: Path to the `exportstats.json` file. Default is the current directory.
+  - `-g`, `--goal`: Specify goal. Options: None (default), Cards, LegendaryCards
+  - `-t`, `--tier`: Specify tier. Options: All (default), Tier1, Tier2
+  - `-p`, `--priority`: Specify priority. Options: Easiest (default), Hardest, Equality
+  - `-s`, `--stats`: Path to exportstats.json (default: current directory)
+  - `-i`, `--ignore-fisher`: Ignore fisher when optimizing placements
+  - `-d`, `--drone-count`: Override drone count when optimizing placements
+  - `--help`: Display this help screen.
 
 ### Examples
-1. Optimize for equality (all tiers):
+1. Run default options (no goal, all tiers, easiest first) with stats directory:
    ```sh
-   dotnet run --goal equality --stats exportstats.json
+   ./FishingPlanner.exe -s "C:\\Users\\username\\Documents\\exportstats.json"
    ```
 
-2. Optimize for the easiest cards (tier 2):
+1. Optimize for the easiest cards (tier 2):
    ```sh
-   dotnet run --goal cards --tier 2 --priority easiest --stats exportstats.json
+   ./FishingPlanner.exe -g Cards -t Tier2 -p Easiest
    ```
 
-3. Optimize for legendary cards (equality goal, tier 1):
+1. Optimize for easiest legendary cards in tier 1:
    ```sh
-   dotnet run --goal legendary-cards --tier 1 --priority equality --stats exportstats.json
+   ./FishingPlanner.exe -g LegendaryCards -t Tier1 -p Equality
+   ```
+
+1. Optimize for leftovers. Place no fisher and 150 drones on tier 1 for equality:
+   ```sh
+   ./FishingPlanner.exe -t Tier1 -p Equality -i -d 150
    ```
