@@ -1,0 +1,113 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "None (Equality)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "None", "-p", "Equality"] 
+    },
+    {
+      "name": "None (Easiest)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "None", "-p", "Easiest"] 
+    },
+    {
+      "name": "None (Hardest)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "None", "-p", "Hardest"] 
+    },
+    {
+      "name": "Cards (Equality)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "Cards", "-p", "Equality"] 
+    },
+    {
+      "name": "Cards (Easiest)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "Cards", "-p", "Easiest"] 
+    },
+    {
+      "name": "Cards (Hardest)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "Cards", "-p", "Hardest"] 
+    },
+    {
+      "name": "Legendary Cards (Equality)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "LegendaryCards", "-p", "Equality"] 
+    },
+    {
+      "name": "Legendary Cards (Easiest)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "LegendaryCards", "-p", "Easiest"] 
+    },
+    {
+      "name": "Legendary Cards (Hardest)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/FishingPlanner.exe", 
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      
+      "args": ["-g", "LegendaryCards", "-p", "Hardest"] 
+    }
+  ]
+}
